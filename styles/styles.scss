@@ -1,0 +1,44 @@
+@import "_setup.scss";
+@import "_variables.scss";
+@import "_header.scss";
+@import "_main.scss";
+@import "_footer.scss";
+
+body {
+    font-size:10px;
+    font-family: 'Open Sans', sans-serif;
+    background:#f9e7e7;
+}
+h1, h2, h3, h4 {
+    margin:0;
+    font-family:'Pacifico', cursive;
+}
+
+p {
+    margin:0;
+}
+.wrapper {
+    max-width:1160px;
+    width:100%;
+    margin:0 auto;
+}
+header {
+    background:lavender;
+}
+main {
+    display:grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-column-gap: 10px;
+    margin:0 10px;
+}
+.introduction{
+    background:palegreen;
+}
+
+.generator {
+    background:paleturquoise;
+}
+
+footer {
+    background:palevioletred;
+}
