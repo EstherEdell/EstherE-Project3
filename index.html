@@ -26,9 +26,9 @@
         </section>
         <section class="generator">
             <div class="wrapper">
-                <div class="gen-demographics">
-                    <h4>Who are you?</h4>
-                    <form action="form" class="form-demo">
+                <form>
+                    <div class="gen-demographics">
+                        <h4>Who are you?</h4>
                         <label for="name">What's your name?</label>
                         <input type="text" class="name" name="yourName">
     
@@ -38,36 +38,32 @@
                         <label for="location">Where do you live?</label>
                         <input type="text" class="location" name="yourLocation">
                         <button>Next!</button>
-                    </form>
-                </div>
-                <div class="gen-level">
-                    <h4>What's your game mode?</h4>
-                    <form action="form" class="form-level">
+                    </div>
+                    <div class="gen-level">
+                        <h4>What's your game mode?</h4>
                         <input type="radio" id="soSerious" name="seriousness" value="longTerm">
                         <label for="contactChoice1">HARD</label>
                     
                         <input type="radio" id="notSerious" name="seriousness" value="shortTerm">
                         <label for="contactChoice2">Easy Level</label>
                         <button>A little bit more to go!</button>
-                    </form>
-                </div>
-                <div class="gen-interests">
-                    <h4>Quick! What are you into?</h4>
-                    <form action="form" class="form-interest">
+                    </div>
+                    <div class="gen-interests">
+                        <h4>Quick! What are you into?</h4>
                         <label for="first-int">1.</label>
                         <input type="text" class="first-int" name="interest">
                         
-                        <label for="age">2.</label>
+                        <label for="second-int">2.</label>
                         <input type="text" class="second-int" name="interest">
                         
-                        <label for="location">3.</label>
+                        <label for="third-int">3.</label>
                         <input type="text" class="third-int" name="interest">
-                        <button>Lets do this!</button>
-                    </form>
-                </div>
-                <div class="gen-final">
-                    <span></span>
-                </div>
+                        <button class="final-button">Lets do this!</button>
+                    </div>
+                    <div class="gen-final">
+                        <span></span>
+                    </div>
+                </for>
             </div>
         </section>
     </main>
