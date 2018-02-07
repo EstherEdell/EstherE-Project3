@@ -11,38 +11,48 @@
 //allow user to share website on twitter
 
 const myApp = {};
+
 myApp.results = {
-    firstParagraph = "Lorem ipsum dolor sit amet."
+     firstLine: `lakjfkljaf`,
 }
 
-$('.gen-demographics button').on('click', function (e) {
+
+
+ $('.final-button').on('click', function (e) {
     e.preventDefault();
-    const userName = $('input[name=yourName]').val();
-    console.log(userName);
-    const userAge = $('input[name=yourAge]').val();
-    console.log(userAge);
-    const userLocal = $('input[name=yourLocation]').val();
-    console.log(userLocal);
-    $('span').html('<h2 class="choice">' + optionToDispaly.title + '</h2>');
+    myApp.userName = $('input[name=yourName]').val();
+    console.log(myApp.userName);
+    myApp.userAge = $('input[name=yourAge]').val();
+    console.log(myApp.userAge);
+    myApp.userLocal = $('input[name=yourLocation]').val();
+    console.log(myApp.userLocal);
+     myApp.relLevel = $('input[name=seriousness]:checked').val();
+     console.log(myApp.relLevel);
+     myApp.userInterest = $('input[name=interest]');
+     console.log(myApp.userInterest);
+     myApp.userInterest.each(function (i, el) {
+         console.log($(el).val());
+    $('span').html(`<p class="choice">${myApp.results.firstLine} ${myApp.userName}</p>`);
 })
 
-$('.gen-level button').on('click', function (e) {
-    e.preventDefault();
-    const relLevel = $('input[name=seriousness]:checked').val();
-    console.log(relLevel);
-})
-$('.final-button').on('click', function (e) {
-    e.preventDefault();
-    const userInterest = $('input[name=interest]');
-    console.log(userInterest);
-    userInterest.each(function(i, el){
-        console.log($(el).val());
+// $('.gen-level button').on('click', function (e) {
+    // e.preventDefault();
+    // myApp.relLevel = $('input[name=seriousness]:checked').val();
+    // console.log(myApp.relLevel);
+    // $('span').html(`<p class="choice">blah blah ${myApp.relLevel}.</p>`);
+// })
+// $('.final-button').on('click', function (e) {
+//     e.preventDefault();
+//     myApp.userInterest = $('input[name=interest]');
+//     console.log(myApp.userInterest);
+//     myApp.userInterest.each(function(i, el){
+//         console.log($(el).val());
     
-    })
+//     })
     
-    $('.final-button').on('submit', function(e){
-        $('span').append(`hi my name is ${userName}, I'm ${userAge} and located in ${userLocal}`);
-    })
+    // $('.final-button').on('submit', function(e){
+    //     $('span').append(`hi my name is ${userName}, I'm ${userAge} and located in ${userLocal}`);
+    // })
     
 });
 
