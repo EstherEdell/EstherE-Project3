@@ -37,6 +37,7 @@ const myApp = {};
 
     myApp.userInterest.each(function (i, el) {
     console.log($(el).val());
+    });
 
         myApp.intro = {
             introOne: `${myApp.userName} one`,
@@ -55,5 +56,14 @@ const myApp = {};
             outroOne: `But also the leap into electronic typesetting, remaining essentially unchanged.`,
             outroTwo: `Contrary to popular belief, Lorem Ipsum is not simply random text.`
         };
-    myApp.firstResponse = `${myApp.intro.introOne} ${myApp.level.serious} ${myApp.interests.interestOne}.`
-    $('span').html(`${myApp.firstResponse}`);
+    myApp.firstResponseSerious = `${myApp.intro.introOne} ${myApp.level.serious} ${myApp.interests.interestOne}${myApp.outro.outroOne}.`
+    
+    myApp.secondResponseSerious = `${myApp.intro.introTwo} ${myApp.level.serious} ${myApp.interests.interestOne}
+    ${myApp.outro.outroOne}.`
+
+    myApp.thirdResponseSerious = `${myApp.intro.introTwo} ${myApp.level.serious} ${myApp.interests.interestOne}${myApp.outro.outroTwo}.`
+
+    myApp.fourthResponseSerious = `${myApp.intro.introOne} ${myApp.level.serious} ${myApp.interests.interestOne}${myApp.outro.outroTwo}.`
+
+    $('span').html(`${myApp.firstResponseSerious}`);
+    });
