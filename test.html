@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PROJECT THREE</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn|Open+Sans" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header>
+        <div class="wrapper">
+            <h1>Name of Site</h1>
+            <h2>Subtitle!</h2>
+        </div>
+    </header>
+    <main>
+        <section class="introduction">
+            <div class="wrapper">
+                <h3>Here's some info!</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, voluptatem. Sequi ipsum nesciunt quia
+                    dicta natus perferendis cumque. Laudantium, veritatis.</p>
+            </div>
+        </section>
+        <section class="generator">
+            <div class="wrapper">
+                <form>
+                    <div class="gen-demographics">
+                        <h4>Who are you?</h4>
+                        <label for="name">What's your name?</label>
+                        <input type="text" class="name" name="yourName">
+
+                        <label for="age">How old are you?</label>
+                        <input type="text" class="age" name="yourAge">
+
+                        <label for="location">Where do you live?</label>
+                        <input type="text" class="location" name="yourLocation">
+                        <!-- <img src="assets/letter-img.png" alt=""> -->
+                        <!-- <button>Next!</button> -->
+                    </div>
+                    <div class="gen-level">
+                        <h4>What's your game mode?</h4>
+                        <input type="radio" id="soSerious" name="seriousness" value="longTerm">
+                        <label for="contactChoice1">HARD</label>
+
+                        <input type="radio" id="notSerious" name="seriousness" value="shortTerm">
+                        <label for="contactChoice2">Easy Level</label>
+                        <!-- <button>A little bit more to go!</button> -->
+                    </div>
+                    <div class="gen-interests">
+                        <h4>Quick! What are you into?</h4>
+                        <label for="first-int">1.</label>
+                        <input type="text" class="first-int" name="interest">
+
+                        <label for="second-int">2.</label>
+                        <input type="text" class="second-int" name="interest">
+
+                        <label for="third-int">3.</label>
+                        <input type="text" class="third-int" name="interest">
+                        <input type="submit">
+                        <!-- <button class="final-button">Lets do this!</button> -->
+                    </div>
+                    <div class="gen-final">
+                        <span></span>
+                    </div>
+                    </for>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>created by Esther </p>
+    </footer>
+
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+        crossorigin='anonymous'></script>
+    <!-- <script src="styles/script.js"></script> -->
+
+    <script>
+    $(document).ready(function() {
+                console.log('test');
+
+        //Bio Sentences
+        const intro = {
+             introOne : `${userName} one`,
+             introTwo : "${userName} to"
+        };
+        const level = {
+            serious : "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            notSerious : "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged."
+        };
+     
+        const interests = {
+            interestOne : "It is a long established fact that a reader will be distracted by the readable content of a page when looking.",
+            interestTwo : "Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)."
+        };
+        const outro = {
+            outroOne : "But also the leap into electronic typesetting, remaining essentially unchanged.",
+            outroTwo : "Contrary to popular belief, Lorem Ipsum is not simply random text."
+        };
+    //gatherData
+        $('form').on('submit', function (e) {
+            e.preventDefault();
+            userName = $('input[name=yourName]').val();
+            console.log(userName);
+
+            userAge = $('input[name=yourAge]').val();
+            console.log(userAge);
+
+            userLocal = $('input[name=yourLocation]').val();
+            console.log(userLocal);
+
+            relLevel = $('input[name=seriousness]:checked').val();
+            console.log(relLevel);
+
+            userInterest = $('input[name=interest]');
+            console.log(userInterest);
+
+            userInterest.each(function (i, el) {
+                console.log($(el).val());
+                $('span').html(`<p class="choice">${userAge}</p>`);
+
+            })
+        });
+    });//end of doc ready
+
+
+    </script>
+</body>
+
+</html>
+
+
+ // $('span').html(`
+<p class="choice">${myApp.intro.introOne} text text text ${myApp.level.serious} more text more text ${myApp.interests.interestOne}</p>`); })
+}); // $('.gen-level button').on('click', function (e) { // e.preventDefault(); // myApp.relLevel = $('input[name=seriousness]:checked').val();
+// console.log(myApp.relLevel); // $('span').html(`
+<p class="choice">blah blah ${myApp.relLevel}.</p>`); // }) // $('.final-button').on('click', function (e) { // e.preventDefault(); // myApp.userInterest
+= $('input[name=interest]'); // console.log(myApp.userInterest); // myApp.userInterest.each(function(i, el){ // console.log($(el).val());
+// }) // $('.final-button').on('submit', function(e){ // $('span').append(`hi my name is ${userName}, I'm ${userAge} and
+located in ${userLocal}`); // }) $(function () { }); //one form that gets submitted, and when it's submitted, grab values
+//can still have buttons, won't let them submit //on click for buttons, on submit for form // if ('.form-demo' !=='') //
+$('span').append(`hi my name is ${userName}, I'm ${userAge} and located in ${userLocal}`); // $('input').val('');

@@ -4,3 +4,12 @@ main {
         padding:15px 20px;
     }
 }
+
+
+.gen-demographics {
+    display:flex;
+    flex-direction:column;
+    input {
+        max-width:50%;
+    }
+}

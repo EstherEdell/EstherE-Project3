@@ -134,11 +134,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 header {
   text-align: center;
-  padding: 34px 0;
-  color: #db5461;
-  text-shadow: 1px 1px 1px #464655; }
+  padding: 75px 0;
+  min-height: 300px; }
   header h1 {
-    font-size: 3.4rem; }
+    font-size: 3.4rem;
+    color: #464655; }
   header h2 {
     font-size: 1.8rem; }
 
@@ -147,14 +147,30 @@ main {
   main div {
     padding: 15px 20px; }
 
+.gen-demographics {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+  .gen-demographics input {
+    max-width: 50%; }
+
 body {
   font-size: 10px;
   font-family: 'Open Sans', sans-serif;
-  background: #f9e7e7; }
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(249, 231, 231, 0.5)), to(rgba(255, 255, 255, 0.5))), url("../assets/swirl_pattern.png");
+  background: -webkit-linear-gradient(rgba(249, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), url("../assets/swirl_pattern.png");
+  background: -o-linear-gradient(rgba(249, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), url("../assets/swirl_pattern.png");
+  background: linear-gradient(rgba(249, 231, 231, 0.5), rgba(255, 255, 255, 0.5)), url("../assets/swirl_pattern.png"); }
+
+h1 {
+  font-family: 'Vollkorn', sans-serif; }
 
 h1, h2, h3, h4 {
-  margin: 0;
-  font-family: 'Pacifico', cursive; }
+  margin: 0; }
 
 p {
   margin: 0; }
@@ -163,9 +179,6 @@ p {
   max-width: 1160px;
   width: 100%;
   margin: 0 auto; }
-
-header {
-  background: lavender; }
 
 main {
   display: grid;

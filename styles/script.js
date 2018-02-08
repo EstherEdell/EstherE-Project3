@@ -12,58 +12,48 @@
 
 const myApp = {};
 
-myApp.results = {
-     firstLine: `lakjfkljaf`,
-}
 
-
-
- $('.final-button').on('click', function (e) {
+    $('form').on('submit', function (e) {
     e.preventDefault();
     myApp.userName = $('input[name=yourName]').val();
     console.log(myApp.userName);
+
     myApp.userAge = $('input[name=yourAge]').val();
     console.log(myApp.userAge);
+
     myApp.userLocal = $('input[name=yourLocation]').val();
     console.log(myApp.userLocal);
-     myApp.relLevel = $('input[name=seriousness]:checked').val();
-     console.log(myApp.relLevel);
-     myApp.userInterest = $('input[name=interest]');
-     console.log(myApp.userInterest);
-     myApp.userInterest.each(function (i, el) {
-         console.log($(el).val());
-    $('span').html(`<p class="choice">${myApp.results.firstLine} ${myApp.userName}</p>`);
-})
 
-// $('.gen-level button').on('click', function (e) {
-    // e.preventDefault();
-    // myApp.relLevel = $('input[name=seriousness]:checked').val();
-    // console.log(myApp.relLevel);
-    // $('span').html(`<p class="choice">blah blah ${myApp.relLevel}.</p>`);
-// })
-// $('.final-button').on('click', function (e) {
-//     e.preventDefault();
-//     myApp.userInterest = $('input[name=interest]');
-//     console.log(myApp.userInterest);
-//     myApp.userInterest.each(function(i, el){
-//         console.log($(el).val());
-    
-//     })
-    
-    // $('.final-button').on('submit', function(e){
-    //     $('span').append(`hi my name is ${userName}, I'm ${userAge} and located in ${userLocal}`);
-    // })
-    
-});
+    myApp.relLevel = $('input[name=seriousness]:checked').val();
+    console.log(myApp.relLevel);
 
 
-$(function () {
-});
+    myApp.userInterest = $('input[name=interest]');
+    console.log(myApp.userInterest);
 
-//one form that gets submitted, and when it's submitted, grab values
-//can still have buttons, won't let them submit
-//on click for buttons, on submit for form
+    // myApp.introductionOne = `Lorem ${myApp.userName} dolor sit, amet ${myApp.userAge} adipisicing ${myApp.userLocal}. Necessitatibus, ad!`;
+    // myApp.introductionTwo = `Lorem ${myApp.userName} dolor sit ${myApp.userAge} consectetur ${myApp.userLocal} elit.`;
 
-    // if ('.form-demo' !=='')
-    //     $('span').append(`hi my name is ${userName}, I'm ${userAge} and located in ${userLocal}`);
-    // $('input').val('');
+
+    myApp.userInterest.each(function (i, el) {
+    console.log($(el).val());
+
+        myApp.intro = {
+            introOne: `${myApp.userName} one`,
+            introTwo: `${myApp.userName} two`
+        };
+        myApp.level = {
+            serious: `Lorem Ipsum is simply dummy text of the printing and ${myApp.relLevel} industry.`,
+            notSerious: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`
+        };
+
+        myApp.interests = {
+            interestOne: `It is a long established fact that a reader will be ${myApp.userInterest} distracted by the readable content of a page when looking.`,
+            interestTwo: `Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`
+        };
+        myApp.outro = {
+            outroOne: `But also the leap into electronic typesetting, remaining essentially unchanged.`,
+            outroTwo: `Contrary to popular belief, Lorem Ipsum is not simply random text.`
+        };
+    myApp.firstResponse = `${myApp.intro.introOne} ${myApp.level.serious} ${myApp.interests.interestOne}.`
+    $('span').html(`${myApp.firstResponse}`);
