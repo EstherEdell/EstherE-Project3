@@ -75,3 +75,4 @@ $('form').on('submit', function (e) {
 
     $('span').html(`${myApp.firstResponseSerious}`);
 });
+

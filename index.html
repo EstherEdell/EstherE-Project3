@@ -6,72 +6,88 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PROJECT THREE</title>
     <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Vollkorn|Open+Sans" rel="stylesheet">
-
+    <link rel="stylesheet" href="animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento|Roboto:400,700" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<!-- Header Photo by Robin van der Ploeg -->
     
 </head>
 <body>
     <header>
-        <div class="wrapper">
-            <h1>Name of Site</h1>
-            <h2>Subtitle!</h2>
+        <div class="hero">
+            <div class="hero-text wrapper">
+                <h1>Website Name!</h1>
+                <h2>Subtitle!</h2>
+            </div>
         </div>
     </header>
     <main>
+        <!-- INTRODUCTORY PARAGRAPH -->
         <section class="introduction">
             <div class="wrapper">
-                <h3>Here's some info!</h3>
+                <h4>Here's some info!</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, voluptatem. Sequi ipsum nesciunt quia dicta natus perferendis cumque. Laudantium, veritatis.</p>
+                <a href="#demographics"><i class="fas fa-angle-double-down"></i></a>
             </div>
         </section>
+        <!-- WHERE TEH FORM STARTS -->
         <section class="generator">
-            <div class="wrapper">
-                <form>
-                    <div class="gen-demographics">
+            <form>
+                <!-- BASIC DEMOGRAPHICS -->
+                <div class="gen-demographics" id="demographics">
+                    <div class="wrapper">
                         <h4>Who are you?</h4>
-                        <label for="name">What's your name?</label>
-                        <input type="text" class="name" name="yourName">
-    
-                        <label for="age">How old are you?</label>
-                        <input type="text" class="age" name="yourAge">
-    
-                        <label for="location">Where do you live?</label>
-                        <input type="text" class="location" name="yourLocation">
-                        <!-- <img src="assets/letter-img.png" alt=""> -->
-                        <!-- <button>Next!</button> -->
+                        <div class="demoInput">
+                            <label for="name">What's your name?</label>
+                            <input type="text" class="name" name="yourName">
+        
+                            <label for="age">How old are you?</label>
+                            <input type="text" class="age" name="yourAge">
+        
+                            <label for="location">Where do you live?</label>
+                            <input type="text" class="location" name="yourLocation">
+                            <a href="#level"><i class="fas fa-angle-double-down"></i></a>
+                        </div>
                     </div>
-                    <div class="gen-level">
-                        <h4>What's your game mode?</h4>
-                        <input type="radio" id="soSerious" name="seriousness" value="longTerm">
-                        <label for="contactChoice1">HARD</label>
-                    
-                        <input type="radio" id="notSerious" name="seriousness" value="shortTerm">
-                        <label for="contactChoice2">Easy Level</label>
-                        <!-- <button>A little bit more to go!</button> -->
+                    <div class="gen-level" id="level">
+                        <!-- SERIOUS VS NOT SERIOUS -->
+                        <div class="wrapper">
+                            <h4>What's your game mode?</h4>
+                            <div class="levelInput">
+                                <input type="radio" id="soSerious" name="seriousness" value="longTerm">
+                                <label for="contactChoice1">HARD</label>
+                            
+                                <input type="radio" id="notSerious" name="seriousness" value="shortTerm">
+                                <label for="contactChoice2">Easy Level</label>
+                                <a href="#interests"><i class="fas fa-angle-double-down"></i></a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="gen-interests">
-                        <h4>Quick! What are you into?</h4>
-                        <label for="first-int">1.</label>
-                        <input type="text" class="first-int" name="interest">
-                        
-                        <label for="second-int">2.</label>
-                        <input type="text" class="second-int" name="interest">
-                        
-                        <label for="third-int">3.</label>
-                        <input type="text" class="third-int" name="interest">
-                        <input type="submit">
-                        <!-- <button class="final-button">Lets do this!</button> -->
+                    <div class="gen-interests" id="interests">
+                        <!-- ADDITIONAL INTERESTS -->
+                        <div class="interestInput wrapper">
+                            <h4>Quick! What are you into?</h4>
+                            <div class="interestInput">
+                                <label for="first-int">1.</label>
+                                <input type="text" class="first-int" name="interest">
+                                
+                                <label for="second-int">2.</label>
+                                <input type="text" class="second-int" name="interest">
+                                
+                                <label for="third-int">3.</label>
+                                <input type="text" class="third-int" name="interest">
+                                <input type="submit">
+                            </div>
+                        </div>
                     </div>
-                    <div class="gen-final">
+                    <div class="gen-final" id="final">
+                        <!-- WHERE THE FINAL DETAILS GO -->
                         <span></span>
                     </div>
-                </for>
+                </form>
             </div>
         </section>
-    </main>
-    <footer>
-        <p>created by Esther </p>
-    </footer>   
+    </main> 
     
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
     <script src="styles/script.js"></script>

@@ -1,15 +1,36 @@
-header {
-    text-align: center;
-    padding:75px 0;
-    min-height:300px;
-    
-    // text-shadow: 1px 1px 1px #464655;
+// header {
+//     text-align: center;
+//     padding:75px 0;
+//     min-height:300px;
+//     background-image:url('../assets/element5-digital-538866.jpg')
 
-    h1 {
-        font-size: 3.4rem;
-        color: #464655;
-    }
-    h2 {
-        font-size:1.8rem;
+//     h1 {
+//         font-size: 3.6rem;
+//     }
+//     h2 {
+//         font-size:1.8rem;
+//         color:$primaryColor;
+//     }
+// }
+.hero {
+    background:linear-gradient(80deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url('../assets/robin-van-der-ploeg-426274.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height:400px;
+    height:100%;
+    .hero-text {
+        text-align:center;
+        padding-top:100px;
+        h1 {
+            font-size:6rem;
+            color:$secondaryColor;
+        }
+        h2 {
+            font-size:2rem;
+            font-family:$baseFont;
+            font-weight: 400;
+            color:#62a8ac;
+        }
     }
 }
