@@ -6,19 +6,29 @@ main {
     font-weight: 300;
     h4 {
         font-size:1.8rem;
-        padding:15px 0;
+        padding:15px 0 15px 0;
         text-align: center;
         text-transform:uppercase;
     }
-    a {
-        color:$primaryColor;
-        font-size:2rem;
-        transition:all 3s;
-        
+    h5 {
+        text-align:center;
+        font-weight: 400;
+        margin:0;
+        padding-bottom:15px;
     }
 }
-main a:hover {
-    color:blue;
+main a  {
+    color:$primaryColor;
+    font-size:2.5rem;
+    position: absolute;
+    bottom:5%;
+    left:50%;
+    transform: translateX(-50%);
+    transition:all 0.3s;
+    &:hover {
+        transform:scale(1.5);
+    }
+    
 }
 .introduction {
     height:50vh;
@@ -35,10 +45,6 @@ main a:hover {
         transform:translateY(-50%);
     }
 }
-// .introduction a {
-    // position:relative;
-    // top:50%;
-// }
 form {
     input[type=text] {
         height:45px;
@@ -47,39 +53,31 @@ form {
         padding: 10px;
         margin-top:5px;
         margin-bottom:25px;
+        font-size:1rem;
     }
     input[type=text]:focus {
         border-bottom:3px solid $secondaryColor;
     }
+    
     .final-button {
         border:0px;
         font-size:1.4rem;
-        background:whitesmoke;
+        background:white;
         padding:10px 35px;
+        letter-spacing: 2px;
     }
 }
     
 
-
 .gen-demographics {
     background:paleturquoise;
-    border:1px solid orange;
     img {
         opacity:0.5;
-    }
-    div {
-        border:1px solid fuchsia;
-    }
-    // input {
-    //     max-width:500px;
-    //     width:100%;
-    // }
-    img {
         max-width:300px;
         width:100%;
     }
 }
-.gen-demographics {
+.gen-demographics, .gen-interests, .gen-level {
     height:100vh;
     position: relative;
     .wrapper {
@@ -92,15 +90,10 @@ form {
     max-width: 500px;
     position: relative;
 }
-.demoFlex {
+.demoFlex, .level-flex {
     
-    // position: relative;
-    // top:50%;
     display: flex;
     justify-content: space-around;
-}
-.shrug {
-    // width:50%;
 }
 .gen-level {
     background:paleturquoise;
@@ -108,22 +101,73 @@ form {
 }
 .gen-interests {
     background:#93E1D8;
-    border:1px solid green;
     height:100vh;
     position: relative;
-    input {
-        max-width:500px;
-    }
-    .wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
 }
-.gen-final {
-    background:#5497a7;
+.interest-flex {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    padding-top:50px;
+    img {
+        max-width:300px;
+        width:100%;
+        opacity:0.5;
+    }
+    .interestInput {
+        max-width:500px;
+        width:100%;
+    }
+}
+.gen-level {
+    .final-button {
+        position: absolute;
+        bottom:5%;
+        left:50%;
+        transform: translateX(-50%);
+    }
+}
+.level-flex {
+    padding-top:50px;
+    img {
+        max-width:300px;
+        width:100%;
+        opacity:0.5;
+    }
+}
+.levelInput {
+    padding-top:50px;
+    div {
+        padding-bottom:20px;
+    }
 }
 .demoInput, .interestInput{
     display:flex;
     flex-direction:column;
+}
+.gen-final {
+    background:#5497a7;
+    height:75vh;
+    padding-top:125px;
+    position: relative;
+    p {
+        margin-top:50px;
+    }
+    button {
+        background:white;
+        border:none;
+        font-size:1.4rem;
+        background:white;
+        padding:10px 35px;
+        letter-spacing: 2px;
+        text-transform:uppercase;
+        position: absolute;
+        bottom:5%;
+        left:50%;
+        transform:translateX(-50%);
+        &:hover {
+            background:$secondaryColor;
+            border:1px solid black;
+        }
+    }
 }

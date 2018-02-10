@@ -68,7 +68,7 @@ $('form').on('submit', function (e) {
         let finalNotSerRes = Math.floor(Math.random() * myApp.notSeriousResp.length);
         let finalNot = myApp.notSeriousResp[finalNotSerRes].notSeriousOption;
         console.log(finalNot);
-        $('span').html(`${finalNot}`);
+        $('.results').html(`${finalNot}`);
 
         $('html, body').animate({
             scrollTop: $("#final").offset().top
@@ -77,15 +77,18 @@ $('form').on('submit', function (e) {
    
 });
 $(function () {
+    //clear form and return to top
     $('.start-again').click(function (e) {
         e.preventDefault();
         $('form input[type="text"]').val('');
-        $('span').val('');
+        $('.results ').val('');
         $('input[type=radio]').prop("checked", false);
         $('html, body').animate({
-            scrollTop: $("#start").offset().top
+            scrollTop: $("#demographics").offset().top
         }, 1000);
     });
+    //smooth scroll
+    $('a').smoothScroll();
 });
 
 

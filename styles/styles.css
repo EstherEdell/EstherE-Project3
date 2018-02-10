@@ -150,7 +150,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
       text-shadow: 1px 2px 3px #353535; }
     .hero .hero-text h2 {
       font-size: 2rem;
-      font-family: "Roboto", sans-serif;
+      font-family: "Muli", sans-serif;
       font-weight: 400;
       color: #62a8ac;
       text-shadow: 1px 2px 3px #353535; }
@@ -163,18 +163,31 @@ main {
   font-weight: 300; }
   main h4 {
     font-size: 1.8rem;
-    padding: 15px 0;
+    padding: 15px 0 15px 0;
     text-align: center;
     text-transform: uppercase; }
-  main a {
-    color: #353535;
-    font-size: 2rem;
-    -webkit-transition: all 3s;
-    -o-transition: all 3s;
-    transition: all 3s; }
+  main h5 {
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+    padding-bottom: 15px; }
 
-main a:hover {
-  color: blue; }
+main a {
+  color: #353535;
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
+  main a:hover {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5); }
 
 .introduction {
   height: 50vh;
@@ -196,7 +209,8 @@ form input[type=text] {
   border: 0;
   padding: 10px;
   margin-top: 5px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  font-size: 1rem; }
 
 form input[type=text]:focus {
   border-bottom: 3px solid #62a8ac; }
@@ -204,24 +218,21 @@ form input[type=text]:focus {
 form .final-button {
   border: 0px;
   font-size: 1.4rem;
-  background: whitesmoke;
-  padding: 10px 35px; }
+  background: white;
+  padding: 10px 35px;
+  letter-spacing: 2px; }
 
 .gen-demographics {
-  background: paleturquoise;
-  border: 1px solid orange; }
+  background: paleturquoise; }
   .gen-demographics img {
-    opacity: 0.5; }
-  .gen-demographics div {
-    border: 1px solid fuchsia; }
-  .gen-demographics img {
+    opacity: 0.5;
     max-width: 300px;
     width: 100%; }
 
-.gen-demographics {
+.gen-demographics, .gen-interests, .gen-level {
   height: 100vh;
   position: relative; }
-  .gen-demographics .wrapper {
+  .gen-demographics .wrapper, .gen-interests .wrapper, .gen-level .wrapper {
     position: relative;
     top: 20%; }
 
@@ -230,7 +241,7 @@ form .final-button {
   max-width: 500px;
   position: relative; }
 
-.demoFlex {
+.demoFlex, .level-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -243,22 +254,47 @@ form .final-button {
 
 .gen-interests {
   background: #93E1D8;
-  border: 1px solid green;
   height: 100vh;
   position: relative; }
-  .gen-interests input {
-    max-width: 500px; }
-  .gen-interests .wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column; }
 
-.gen-final {
-  background: #5497a7; }
+.interest-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  padding-top: 50px; }
+  .interest-flex img {
+    max-width: 300px;
+    width: 100%;
+    opacity: 0.5; }
+  .interest-flex .interestInput {
+    max-width: 500px;
+    width: 100%; }
+
+.gen-level .final-button {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%); }
+
+.level-flex {
+  padding-top: 50px; }
+  .level-flex img {
+    max-width: 300px;
+    width: 100%;
+    opacity: 0.5; }
+
+.levelInput {
+  padding-top: 50px; }
+  .levelInput div {
+    padding-bottom: 20px; }
 
 .demoInput, .interestInput {
   display: -webkit-box;
@@ -269,12 +305,38 @@ form .final-button {
   -ms-flex-direction: column;
   flex-direction: column; }
 
+.gen-final {
+  background: #5497a7;
+  height: 75vh;
+  padding-top: 125px;
+  position: relative; }
+  .gen-final p {
+    margin-top: 50px; }
+  .gen-final button {
+    background: white;
+    border: none;
+    font-size: 1.4rem;
+    background: white;
+    padding: 10px 35px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .gen-final button:hover {
+      background: #62a8ac;
+      border: 1px solid black; }
+
 footer {
-  height: 50vh; }
+  height: 25vh;
+  background-color: orange; }
 
 body {
   font-size: 10px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Muli", sans-serif; }
 
 h1 {
   font-family: "Sacramento", cursive;
