@@ -1,17 +1,12 @@
 //PSEUDOCODE
-//Allow user to input name, age and location
+//Allow user to input information
 //When user clicks submit, values are stored and next page loads
-//add class of hidden??
-//second page - allow user to select level of seriousness
-//on submit, stores the result and loads next page
-//user inputs three values of interests 
 //on submit, final page is presented
 //using stored values, a paragraph is generated
 //provide a way for user to easily copy the code
 //allow user to share website on twitter
 
 const myApp = {};
-
 
 $('form').on('submit', function (e) {
     e.preventDefault();
@@ -23,56 +18,75 @@ $('form').on('submit', function (e) {
 
     myApp.userLocal = $('input[name=yourLocation]').val();
     console.log(myApp.userLocal);
-
-    myApp.relLevel = $('input[name=seriousness]:checked').val();
-
-    console.log(myApp.relLevel);
-
+    
     myApp.userInterest = $('input[name=interest]');
     console.log(myApp.userInterest);
-
-    // myApp.introductionOne = `Lorem ${myApp.userName} dolor sit, amet ${myApp.userAge} adipisicing ${myApp.userLocal}. Necessitatibus, ad!`;
-    // myApp.introductionTwo = `Lorem ${myApp.userName} dolor sit ${myApp.userAge} consectetur ${myApp.userLocal} elit.`;
 
     console.log(myApp.userInterest);
 
     myApp.userInterest = myApp.userInterest.map(function (i, el) {
         return $(el).val();
     }).get().join();
-    myApp.LevelSelect = {
-        levelOne: [],
-        levelTwo: []
+
+    myApp.seriousResp = [
+        {
+            seriousOption: `${myApp.userAge} OPTION ONE`
+        },
+        {
+            seriousOption: `${myApp.userAge} OPTION TWO`
+        },
+        {
+            seriousOption: `${myApp.userAge} OPTION THREE`
+        }
+    ];
+    myApp.notSeriousResp = [
+        {
+            notSeriousOption: `${myApp.userName} HARD ONE`
+        },
+        {
+            notSeriousOption: `${myApp.userName} HARD TWO`
+        },
+        {
+            notSeriousOption: `${myApp.userName} HARD THREE`
+        }
+    ]
+
+    myApp.relLevel = $('input[name=seriousness]:checked').val();
+
+    console.log(myApp.relLevel);
+
+    if(myApp.relLevel === 'longTerm'){
+        let finalSerRes = Math.floor(Math.random() * myApp.seriousResp.length);
+        let finalSerious = myApp.seriousResp[finalSerRes].seriousOption;
+        console.log(finalSerious);
+        $('span').html(`${finalSerious}`);
+        $('html, body').animate({
+            scrollTop: $("#final").offset().top
+        }, 1000);
+    }
+    else if(myApp.relLevel ==='shortTerm'){
+        let finalNotSerRes = Math.floor(Math.random() * myApp.notSeriousResp.length);
+        let finalNot = myApp.notSeriousResp[finalNotSerRes].notSeriousOption;
+        console.log(finalNot);
+        $('span').html(`${finalNot}`);
+
+        $('html, body').animate({
+            scrollTop: $("#final").offset().top
+        }, 1000);
     };
-    myApp.intro = {
-        introOne: `${myApp.userName} one`,
-        introTwo: `${myApp.userName} two`
-    };
-    myApp.level = {
-        longTerm: `Lorem Ipsum is simply dummy text of the printing and industry.`,
-        shortTerm: `It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`
-    };
-
-    myApp.interests = {
-        interestOne: `It is a long established fact that a reader will be ${myApp.userInterest} distracted by the readable content of a page when looking.`,
-        interestTwo: `Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).`
-    };
-    myApp.outro = {
-        outroOne: `But also the leap into electronic typesetting, remaining essentially unchanged.`,
-        outroTwo: `Contrary to popular belief, Lorem Ipsum is not simply random text.`
-    };
-    myApp.firstResponseSerious = `${myApp.intro.introOne} ${myApp.level.longTerm} ${myApp.interests.interestOne}${myApp.outro.outroOne}.`
-    
-    myApp.secondResponseSerious = `${myApp.intro.introTwo} ${myApp.level.longTerm} ${myApp.interests.interestOne}
-    ${myApp.outro.outroOne}.`
-
-    myApp.thirdResponseSerious = `${myApp.intro.introTwo} ${myApp.level.longTerm} ${myApp.interests.interestOne}${myApp.outro.outroTwo}.`
-
-    myApp.fourthResponseSerious = `${myApp.intro.introOne} ${myApp.level.longTerm} ${myApp.interests.interestOne}${myApp.outro.outroTwo}.`
-
-    myApp.firstResponseNotSerious = `${myApp.intro.introOne} ${myApp.level.shortTerm} ${myApp.interests.interestOne}${myApp.outro.outroTwo}.`
-
-    myApp.firstResponseNotSerious = `${myApp.intro.introOne} ${myApp.level.shortTerm} ${myApp.interests.interestOne}${myApp.outro.outroTwo}.`
-
-    $('span').html(`${myApp.firstResponseSerious}`);
+   
+});
+$(function () {
+    $('.start-again').click(function (e) {
+        e.preventDefault();
+        $('form input[type="text"]').val('');
+        $('span').val('');
+        $('input[type=radio]').prop("checked", false);
+        $('html, body').animate({
+            scrollTop: $("#start").offset().top
+        }, 1000);
+    });
 });
 
+
+    

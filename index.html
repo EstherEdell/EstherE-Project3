@@ -7,9 +7,9 @@
     <title>PROJECT THREE</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="animate.css">
-    <link href="https://fonts.googleapis.com/css?family=Sacramento|Roboto:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sacramento|Roboto:300,400,700" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-<!-- Header Photo by Robin van der Ploeg -->
+<!-- Header  Photo by Thom on Unsplash -->
     
 </head>
 <body>
@@ -23,7 +23,7 @@
     </header>
     <main>
         <!-- INTRODUCTORY PARAGRAPH -->
-        <section class="introduction">
+        <section class="introduction" id="start">
             <div class="wrapper">
                 <h4>Here's some info!</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus, voluptatem. Sequi ipsum nesciunt quia dicta natus perferendis cumque. Laudantium, veritatis.</p>
@@ -37,16 +37,46 @@
                 <div class="gen-demographics" id="demographics">
                     <div class="wrapper">
                         <h4>Who are you?</h4>
-                        <div class="demoInput">
-                            <label for="name">What's your name?</label>
-                            <input type="text" class="name" name="yourName">
-        
-                            <label for="age">How old are you?</label>
-                            <input type="text" class="age" name="yourAge">
-        
-                            <label for="location">Where do you live?</label>
-                            <input type="text" class="location" name="yourLocation">
+                        <div class="demoFlex">
+                            <div class="demoInput">
+                                <label for="name">What's your name?</label>
+                                <input type="text" class="name" name="yourName" placeholder="what should we call you?">
+            
+                                <label for="age">How old are you?</label>
+                                <input type="text" class="age" name="yourAge" placeholder="your age in human years">
+            
+                                <label for="location">Where do you live?</label>
+                                <input type="text" class="location" name="yourLocation" placeholder="where will we find you?">
+                            </div>
+                            <!-- <div class="shrug"> -->
+                                <img src="assets/shrug.png" alt="confused shrug by Gregor Cresnar from the Noun Project">
+                            <!-- </div> -->
+                        </div>
+                        
+                        <!-- <div class="goNext"> -->
+                            <!-- </div> -->
                             <a href="#level"><i class="fas fa-angle-double-down"></i></a>
+                    </div> 
+                </div>
+                    
+                    <div class="gen-interests" id="interests">
+                        <!-- ADDITIONAL INTERESTS -->
+                        <div class="interestInput wrapper">
+                            <h4>Quick! What are you into?</h4>
+                            <div class="interestInput">
+                                <label for="first-int">1.</label>
+                                <input type="text" class="first-int" name="interest" placeholder="movies? sports? books?">
+                                
+                                <label for="second-int">2.</label>
+                                <input type="text" class="second-int" name="interest" placeholder="beer? whiskey? wine?">
+                                
+                                <label for="third-int">3.</label>
+                                <input type="text" class="third-int" name="interest" placeholder="sleeping? eating? base jumping">
+                                
+                            </div>
+                                    <a href="#interests">
+                                        <i class="fas fa-angle-double-down"></i>
+                                    </a>
                         </div>
                     </div>
                     <div class="gen-level" id="level">
@@ -56,36 +86,20 @@
                             <div class="levelInput">
                                 <input type="radio" id="soSerious" name="seriousness" value="longTerm">
                                 <label for="contactChoice1">HARD</label>
-                            
+                    
                                 <input type="radio" id="notSerious" name="seriousness" value="shortTerm">
                                 <label for="contactChoice2">Easy Level</label>
-                                <a href="#interests"><i class="fas fa-angle-double-down"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="gen-interests" id="interests">
-                        <!-- ADDITIONAL INTERESTS -->
-                        <div class="interestInput wrapper">
-                            <h4>Quick! What are you into?</h4>
-                            <div class="interestInput">
-                                <label for="first-int">1.</label>
-                                <input type="text" class="first-int" name="interest">
-                                
-                                <label for="second-int">2.</label>
-                                <input type="text" class="second-int" name="interest">
-                                
-                                <label for="third-int">3.</label>
-                                <input type="text" class="third-int" name="interest">
-                                <input type="submit">
+                                <input type="submit" class="final-button" value="LETS GO">
                             </div>
                         </div>
                     </div>
                     <div class="gen-final" id="final">
                         <!-- WHERE THE FINAL DETAILS GO -->
                         <span></span>
+                        <button class="start-again">Start Over?</button>
                     </div>
-                </form>
-            </div>
+            </form>
+                
         </section>
     </main> 
     

@@ -133,10 +133,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .hero {
-  background: -webkit-linear-gradient(10deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url("../assets/robin-van-der-ploeg-426274.jpg");
-  background: -o-linear-gradient(10deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url("../assets/robin-van-der-ploeg-426274.jpg");
-  background: linear-gradient(80deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url("../assets/robin-van-der-ploeg-426274.jpg");
-  background-position: center;
+  background: -webkit-linear-gradient(10deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url("../assets/hero-photo.jpg");
+  background: -o-linear-gradient(10deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url("../assets/hero-photo.jpg");
+  background: linear-gradient(80deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url("../assets/hero-photo.jpg");
+  background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 400px;
@@ -146,15 +146,21 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     padding-top: 100px; }
     .hero .hero-text h1 {
       font-size: 6rem;
-      color: #62a8ac; }
+      color: #62a8ac;
+      text-shadow: 1px 2px 3px #353535; }
     .hero .hero-text h2 {
       font-size: 2rem;
       font-family: "Roboto", sans-serif;
       font-weight: 400;
-      color: #62a8ac; }
+      color: #62a8ac;
+      text-shadow: 1px 2px 3px #353535; }
+
+img {
+  display: block; }
 
 main {
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  font-weight: 300; }
   main h4 {
     font-size: 1.8rem;
     padding: 15px 0;
@@ -175,6 +181,9 @@ main a:hover {
   background-color: #93E1D8;
   text-align: center;
   position: relative; }
+  .introduction p {
+    line-height: 34px;
+    padding-bottom: 30px; }
   .introduction .wrapper {
     position: relative;
     top: 50%;
@@ -182,23 +191,64 @@ main a:hover {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%); }
 
-form input {
-  border: 0; }
+form input[type=text] {
+  height: 45px;
+  border: 0;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 25px; }
 
-form div {
+form input[type=text]:focus {
+  border-bottom: 3px solid #62a8ac; }
+
+form .final-button {
+  border: 0px;
+  font-size: 1.4rem;
+  background: whitesmoke;
+  padding: 10px 35px; }
+
+.gen-demographics {
+  background: paleturquoise;
+  border: 1px solid orange; }
+  .gen-demographics img {
+    opacity: 0.5; }
+  .gen-demographics div {
+    border: 1px solid fuchsia; }
+  .gen-demographics img {
+    max-width: 300px;
+    width: 100%; }
+
+.gen-demographics {
+  height: 100vh;
+  position: relative; }
+  .gen-demographics .wrapper {
+    position: relative;
+    top: 20%; }
+
+.demoInput {
+  width: 100%;
+  max-width: 500px;
+  position: relative; }
+
+.demoFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+
+.gen-level {
+  background: paleturquoise;
   height: 100vh; }
 
-form .gen-demographics {
-  background: paleturquoise; }
-
-form .gen-level {
-  background: #93E1D8; }
-
-form .gen-interests {
-  background: paleturquoise; }
-  form .gen-interests input {
+.gen-interests {
+  background: #93E1D8;
+  border: 1px solid green;
+  height: 100vh;
+  position: relative; }
+  .gen-interests input {
     max-width: 500px; }
-  form .gen-interests .wrapper {
+  .gen-interests .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -207,8 +257,8 @@ form .gen-interests {
     -ms-flex-direction: column;
     flex-direction: column; }
 
-form .gen-final {
-  background: #93E1D8; }
+.gen-final {
+  background: #5497a7; }
 
 .demoInput, .interestInput {
   display: -webkit-box;

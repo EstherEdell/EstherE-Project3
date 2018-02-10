@@ -13,8 +13,8 @@
 //     }
 // }
 .hero {
-    background:linear-gradient(80deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url('../assets/robin-van-der-ploeg-426274.jpg');
-    background-position: center;
+    background:linear-gradient(80deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url('../assets/hero-photo.jpg');
+    background-position: left;
     background-size: cover;
     background-repeat: no-repeat;
     min-height:400px;
@@ -25,12 +25,14 @@
         h1 {
             font-size:6rem;
             color:$secondaryColor;
+            text-shadow:1px 2px 3px #353535;
         }
         h2 {
             font-size:2rem;
             font-family:$baseFont;
             font-weight: 400;
             color:#62a8ac;
+            text-shadow:1px 2px 3px #353535;
         }
     }
 }

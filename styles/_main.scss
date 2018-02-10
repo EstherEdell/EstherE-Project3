@@ -1,5 +1,9 @@
+img {
+    display: block;
+}
 main {
     font-size:1.4rem;
+    font-weight: 300;
     h4 {
         font-size:1.8rem;
         padding:15px 0;
@@ -21,47 +25,103 @@ main a:hover {
     background-color:#93E1D8;
     text-align: center;
     position: relative;
+    p {
+        line-height: 34px;
+        padding-bottom:30px;
+    }
     .wrapper {
         position:relative;
         top:50%;
         transform:translateY(-50%);
     }
 }
+// .introduction a {
+    // position:relative;
+    // top:50%;
+// }
 form {
-    input {
+    input[type=text] {
+        height:45px;
         border:0;
+        // border-radius:50px;
+        padding: 10px;
+        margin-top:5px;
+        margin-bottom:25px;
     }
-    // a {
-    //     text-decoration: none;
-    //     text-transform:uppercase;
-    //     padding:15px 25px;
-    //     color:black;
-    //     background:grey;
+    input[type=text]:focus {
+        border-bottom:3px solid $secondaryColor;
+    }
+    .final-button {
+        border:0px;
+        font-size:1.4rem;
+        background:whitesmoke;
+        padding:10px 35px;
+    }
+}
+    
 
-    // }
+
+.gen-demographics {
+    background:paleturquoise;
+    border:1px solid orange;
+    img {
+        opacity:0.5;
+    }
     div {
-        height:100vh;
-        // padding:50px 0;
+        border:1px solid fuchsia;
     }
-    .gen-demographics {
-        background:paleturquoise;
+    // input {
+    //     max-width:500px;
+    //     width:100%;
+    // }
+    img {
+        max-width:300px;
+        width:100%;
     }
-    .gen-level {
-        background:#93E1D8;
+}
+.gen-demographics {
+    height:100vh;
+    position: relative;
+    .wrapper {
+        position: relative;
+        top:20%;
     }
-    .gen-interests {
-        background:paleturquoise;
-        input {
-            max-width:500px;
-        }
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-        }
+}
+.demoInput {
+    width:100%;
+    max-width: 500px;
+    position: relative;
+}
+.demoFlex {
+    
+    // position: relative;
+    // top:50%;
+    display: flex;
+    justify-content: space-around;
+}
+.shrug {
+    // width:50%;
+}
+.gen-level {
+    background:paleturquoise;
+    height:100vh;
+}
+.gen-interests {
+    background:#93E1D8;
+    border:1px solid green;
+    height:100vh;
+    position: relative;
+    input {
+        max-width:500px;
     }
-    .gen-final {
-        background:#93E1D8;
+    .wrapper {
+        display: flex;
+        flex-direction: column;
     }
+
+}
+.gen-final {
+    background:#5497a7;
 }
 .demoInput, .interestInput{
     display:flex;
