@@ -133,9 +133,10 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   box-sizing: border-box; }
 
 .hero {
-  background: -webkit-linear-gradient(10deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url("../assets/hero-photo.jpg");
-  background: -o-linear-gradient(10deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url("../assets/hero-photo.jpg");
-  background: linear-gradient(80deg, rgba(147, 225, 216, 0.8), rgba(84, 151, 167, 0.3), rgba(255, 255, 255, 0.9)), url("../assets/hero-photo.jpg");
+  background: -webkit-gradient(linear, left top, right top, from(rgba(84, 151, 167, 0.5)), to(rgba(255, 255, 255, 0.8))), url("../assets/adriano-de-gironimo-191544.jpg");
+  background: -webkit-linear-gradient(left, rgba(84, 151, 167, 0.5), rgba(255, 255, 255, 0.8)), url("../assets/adriano-de-gironimo-191544.jpg");
+  background: -o-linear-gradient(left, rgba(84, 151, 167, 0.5), rgba(255, 255, 255, 0.8)), url("../assets/adriano-de-gironimo-191544.jpg");
+  background: linear-gradient(90deg, rgba(84, 151, 167, 0.5), rgba(255, 255, 255, 0.8)), url("../assets/adriano-de-gironimo-191544.jpg");
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
@@ -195,6 +196,7 @@ main a {
   text-align: center;
   position: relative; }
   .introduction p {
+    font-size: 1.3rem;
     line-height: 34px;
     padding-bottom: 30px; }
   .introduction .wrapper {
@@ -227,7 +229,9 @@ form .final-button {
   .gen-demographics img {
     opacity: 0.5;
     max-width: 300px;
-    width: 100%; }
+    width: 100%;
+    min-height: 300px;
+    height: 100%; }
 
 .gen-demographics, .gen-interests, .gen-level {
   height: 100vh;
@@ -271,7 +275,9 @@ form .final-button {
   .interest-flex img {
     max-width: 300px;
     width: 100%;
-    opacity: 0.5; }
+    opacity: 0.5;
+    min-height: 300px;
+    height: 100%; }
   .interest-flex .interestInput {
     max-width: 500px;
     width: 100%; }
@@ -289,7 +295,9 @@ form .final-button {
   .level-flex img {
     max-width: 300px;
     width: 100%;
-    opacity: 0.5; }
+    opacity: 0.5;
+    min-height: 300px;
+    height: 100%; }
 
 .levelInput {
   padding-top: 50px; }
