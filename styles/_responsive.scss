@@ -1,0 +1,114 @@
+@media (max-width:667px) {
+    img {
+        display:none;
+    }
+    header {
+        height:100%;
+        max-height:100vh;
+    }
+    .hero .hero-text h1 {
+        font-size:3.6rem;
+    }
+    .hero .hero-text h2 {
+        font-size:1.6rem;
+    }
+    main {
+        form .wrapper {
+            padding:0 20px;
+           
+        }
+        h4 {
+            font-size:1.5rem;
+        }
+        h5 {
+            font-size:1rem;
+        }
+    }
+
+    .gen-demographics, .gen-interests, .gen-level {
+    height:100vh;
+    position: relative;
+    .wrapper {
+        position: relative;
+        top:10%;
+    }
+}
+    
+    .introduction {
+        height:100vh;
+        padding: 0 20px;
+        p {
+            font-size:1rem;
+        }
+    }
+    label {
+        font-size:1rem;
+    }
+    .results {
+        font-size:1.2rem;
+    }
+    // .gen-final button {
+    //     font-size: 1rem;
+    //     font-weight: 700;
+    //     letter-spacing: 0px;
+    //     padding:15px 25px;
+    // }
+    .gen-level .final-button, .gen-final .start-again {
+        font-size:1rem;
+        font-weight: 700;
+        letter-spacing: 0;
+        padding:15px 25px;
+    }
+};
+
+@media (max-width:400px) {
+    header {
+        height:50vh;
+    }
+    .hero .hero-text h1 {
+        font-size:3rem;
+    }
+    .hero .hero-text h2 {
+        font-size:1.2rem;
+    }
+    .introduction {
+        p {
+        font-size:14px;
+        }
+    }
+    main {
+
+        form .wrapper {
+            padding:0 20px;
+           
+        }
+        h4 {
+            font-size:2rem;
+        }
+        h5 {
+            font-size:1rem;
+        }
+        .interest-flex, .level-flex {
+            padding-top:20px;
+        }
+        .levelInput {
+            padding-top:10px;
+        }
+    }
+    .gen-final {
+        padding-top:50px;
+        height: 100vh;
+    }
+    .final-info {
+        font-size:16px;
+    }
+    .results {
+        font-size:1rem;
+    }
+    p.final-info {
+        margin-top:25px;
+    }
+    footer {
+        padding-left:50px;
+    }
+}

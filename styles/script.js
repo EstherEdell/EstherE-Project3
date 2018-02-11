@@ -36,7 +36,10 @@ $('form').on('submit', function (e) {
             seriousOption: `Hey! I'm ${myApp.userName}, I'm an easy going ${myApp.userAge} year old from ${myApp.userLocal}. Looking for my partner in crime - maybe that's you? In my spare time I really enjoy ${myApp.userInterestOne} and ${myApp.userInterestTwo}, but secretly I love ${myApp.userInterestThree}. Oh, and my mom says I'm a catch!`
         },
         {
-            seriousOption: `I'm ${myApp.userName}, a simple ${myApp.userAge} year old living in ${myApp.userLocal}. I'm really lookng for someone to enjoy this adventure we call life with me! When I have some free time, my favourite things are ${myApp.userInterestOne} and ${myApp.userInterestTwo}, and sometimes ${myApp.userInterestThree}. 🍕 🌮 😎 ✈️`
+            seriousOption: `I'm ${myApp.userName}, a simple ${myApp.userAge} year old living in ${myApp.userLocal}. I'm really lookng for someone to enjoy this adventure we call life with me! When I have some free time, my favourite things are ${myApp.userInterestOne} and ${myApp.userInterestTwo}, and sometimes ${myApp.userInterestThree}. 🍕 🌮 😎 ✈️ 🎥 💯 🌏`
+        },
+        {
+            seriousOption: `My name is ${myApp.userName}, and I'm just a typical ${myApp.userAge} year old currently living in ${myApp.userLocal}. My life is full but it feels like it's missing something - maybe it's you? Maybe we can meet up and talk about ${myApp.userInterestOne} and ${myApp.userInterestTwo}, or maybe make a plan to enjoy ${myApp.userInterestThree}? Would also love to meet someone soon so my family stops asking why I'm stil single!`
         }
     ];
     myApp.notSeriousResp = [
@@ -48,11 +51,14 @@ $('form').on('submit', function (e) {
         },
         {
             notSeriousOption: `I'm ${myApp.userName}, ${myApp.userAge}  from ${myApp.userLocal}. Mostly looking for friends and casual hang outs, but let's see where things go. Do you enjoy ${myApp.userInterestOne} or ${myApp.userInterestTwo}? Great! I also reallly love ${myApp.userInterestThree} if that's something you'd be into. Let's just together and see where things go`
+        },
+        {
+            notSeriousOption: `Oh hey. ${myApp.userName}, ${myApp.userAge}  from ${myApp.userLocal}. Not looking for a commitment, just someone to chill with on the weekends. Really only into people who share my love of ${myApp.userInterestOne} and ${myApp.userInterestTwo}. Negotiable on my interest in ${myApp.userInterestThree}. Just looking for someone with a good smile and sense of humour.`
         }
+        
     ]
 
     myApp.relLevel = $('input[name=seriousness]:checked').val();
-
     console.log(myApp.relLevel);
 
     if(myApp.relLevel === 'longTerm'){

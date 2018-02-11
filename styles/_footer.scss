@@ -1,4 +1,42 @@
 footer {
     height:25vh;
-    background-color:orange;
+    background-color:#93e1d8;
+    font-size:1rem;
+    padding-top:50px;
+    .fa-linkedin-in, .fa-twitter {
+        font-size:1.2   rem;
+        color:$primaryColor;
+    }
 }
+.contact-info {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    span {
+        display: inline-block;
+        margin-bottom:15px;
+    }
+    a {
+        &:hover{
+            opacity:0.5;
+        }
+    }
+}
+.footer-text {
+    align-self: center;
+}
+.share {
+    color:$primaryColor;
+    text-decoration: none;
+    background:$secondaryColor;
+    font-size:1.2rem;
+    padding:10px 25px;
+    border-radius: 5px;
+    margin-bottom:20px;
+    align-self:center;
+    .fa-twitter-square {
+        margin-right:10px;
+        color:$primaryColor;;
+    }
+}
+

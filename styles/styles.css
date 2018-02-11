@@ -161,12 +161,16 @@ img {
 
 main {
   font-size: 1.4rem;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #353535;
+  line-height: 28px; }
   main h4 {
-    font-size: 1.8rem;
-    padding: 15px 0 15px 0;
-    text-align: center;
-    text-transform: uppercase; }
+    font-family: "Sacramento", cursive;
+    text-shadow: 1px 1px 5px #f0f7ee;
+    font-size: 2.6rem;
+    line-height: 20px;
+    padding: 15px 0 20px 0;
+    text-align: center; }
   main h5 {
     text-align: center;
     font-weight: 400;
@@ -196,8 +200,8 @@ main a {
   text-align: center;
   position: relative; }
   .introduction p {
-    font-size: 1.3rem;
-    line-height: 34px;
+    font-size: 1rem;
+    line-height: 28px;
     padding-bottom: 30px; }
   .introduction .wrapper {
     position: relative;
@@ -219,10 +223,14 @@ form input[type=text]:focus {
 
 form .final-button {
   border: 0px;
+  height: 50px;
+  width: 250px;
   font-size: 1.4rem;
-  background: white;
-  padding: 10px 35px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
   letter-spacing: 2px; }
+  form .final-button:hover {
+    background: white; }
 
 .gen-demographics {
   background: paleturquoise; }
@@ -284,7 +292,7 @@ form .final-button {
 
 .gen-level .final-button {
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 50%;
   -webkit-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -322,25 +330,139 @@ form .final-button {
     margin-top: 50px; }
   .gen-final button {
     background: white;
-    border: none;
+    border-radius: 10px;
     font-size: 1.4rem;
+    font-weight: 400;
     background: white;
-    padding: 10px 35px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    height: 50px;
+    width: 250px;
     position: absolute;
-    bottom: 5%;
+    bottom: 10%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
-    transform: translateX(-50%); }
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.5);
+    border: none; }
     .gen-final button:hover {
-      background: #62a8ac;
-      border: 1px solid black; }
+      background: white; }
+
+.final-info {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: 400; }
 
 footer {
   height: 25vh;
-  background-color: orange; }
+  background-color: #93e1d8;
+  font-size: 1rem;
+  padding-top: 50px; }
+  footer .fa-linkedin-in, footer .fa-twitter {
+    font-size: 1.2   rem;
+    color: #353535; }
+
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .contact-info span {
+    display: inline-block;
+    margin-bottom: 15px; }
+  .contact-info a:hover {
+    opacity: 0.5; }
+
+.footer-text {
+  -ms-flex-item-align: center;
+  align-self: center; }
+
+.share {
+  color: #353535;
+  text-decoration: none;
+  background: #62a8ac;
+  font-size: 1.2rem;
+  padding: 10px 25px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  -ms-flex-item-align: center;
+  align-self: center; }
+  .share .fa-twitter-square {
+    margin-right: 10px;
+    color: #353535; }
+
+@media (max-width: 667px) {
+  img {
+    display: none; }
+  header {
+    height: 100%;
+    max-height: 100vh; }
+  .hero .hero-text h1 {
+    font-size: 3.6rem; }
+  .hero .hero-text h2 {
+    font-size: 1.6rem; }
+  main form .wrapper {
+    padding: 0 20px; }
+  main h4 {
+    font-size: 1.5rem; }
+  main h5 {
+    font-size: 1rem; }
+  .gen-demographics, .gen-interests, .gen-level {
+    height: 100vh;
+    position: relative; }
+    .gen-demographics .wrapper, .gen-interests .wrapper, .gen-level .wrapper {
+      position: relative;
+      top: 10%; }
+  .introduction {
+    height: 100vh;
+    padding: 0 20px; }
+    .introduction p {
+      font-size: 1rem; }
+  label {
+    font-size: 1rem; }
+  .results {
+    font-size: 1.2rem; }
+  .gen-level .final-button, .gen-final .start-again {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0;
+    padding: 15px 25px; } }
+
+@media (max-width: 400px) {
+  header {
+    height: 50vh; }
+  .hero .hero-text h1 {
+    font-size: 3rem; }
+  .hero .hero-text h2 {
+    font-size: 1.2rem; }
+  .introduction p {
+    font-size: 14px; }
+  main form .wrapper {
+    padding: 0 20px; }
+  main h4 {
+    font-size: 2rem; }
+  main h5 {
+    font-size: 1rem; }
+  main .interest-flex, main .level-flex {
+    padding-top: 20px; }
+  main .levelInput {
+    padding-top: 10px; }
+  .gen-final {
+    padding-top: 50px;
+    height: 100vh; }
+  .final-info {
+    font-size: 16px; }
+  .results {
+    font-size: 1rem; }
+  p.final-info {
+    margin-top: 25px; }
+  footer {
+    padding-left: 50px; } }
 
 body {
   font-size: 10px;

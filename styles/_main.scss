@@ -4,11 +4,15 @@ img {
 main {
     font-size:1.4rem;
     font-weight: 300;
+    color:$primaryColor;
+    line-height:28px;
     h4 {
-        font-size:1.8rem;
-        padding:15px 0 15px 0;
+        font-family: $secondFont;
+        text-shadow:1px 1px 5px #f0f7ee;
+        font-size:2.6rem;
+        line-height: 20px;
+        padding:15px 0 20px 0;
         text-align: center;
-        text-transform:uppercase;
     }
     h5 {
         text-align:center;
@@ -36,8 +40,8 @@ main a  {
     text-align: center;
     position: relative;
     p {
-        font-size:1.3rem;
-        line-height: 34px;
+        font-size:1rem;
+        line-height: 28px;
         padding-bottom:30px;
     }
     .wrapper {
@@ -50,7 +54,6 @@ form {
     input[type=text] {
         height:45px;
         border:0;
-        // border-radius:50px;
         padding: 10px;
         margin-top:5px;
         margin-bottom:25px;
@@ -62,10 +65,17 @@ form {
     
     .final-button {
         border:0px;
+        height:50px;
+        width:250px;
         font-size:1.4rem;
-        background:white;
-        padding:10px 35px;
+        background:rgba(255, 255, 255, 0.5);
+        border-radius:10px;
+        // padding:10px 60px;
         letter-spacing: 2px;
+
+        &:hover {
+            background:white;
+        }
     }
 }
     
@@ -123,11 +133,11 @@ form {
         max-width:500px;
         width:100%;
     }
-}
+} 
 .gen-level {
     .final-button {
         position: absolute;
-        bottom:5%;
+        bottom:10%;
         left:50%;
         transform: translateX(-50%);
     }
@@ -162,19 +172,25 @@ form {
     }
     button {
         background:white;
-        border:none;
+        border-radius:10px;
         font-size:1.4rem;
+        font-weight: 400;
         background:white;
-        padding:10px 35px;
-        letter-spacing: 2px;
-        text-transform:uppercase;
+        height:50px;
+        width:250px;
         position: absolute;
-        bottom:5%;
+        bottom:10%;
         left:50%;
         transform:translateX(-50%);
+        background:rgba(255, 255, 255, 0.5);
+        border:none;
         &:hover {
-            background:$secondaryColor;
-            border:1px solid black;
+            background:white;
         }
     }
+}
+.final-info {
+    font-size:1.4rem;
+    text-align:center;
+    font-weight: 400;
 }
