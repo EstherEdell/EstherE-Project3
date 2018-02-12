@@ -228,7 +228,10 @@ form .final-button {
   font-size: 1.4rem;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 10px;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s; }
   form .final-button:hover {
     background: white; }
 
@@ -241,10 +244,10 @@ form .final-button {
     min-height: 300px;
     height: 100%; }
 
-.gen-demographics, .gen-interests, .gen-level {
+.gen-demographics, .gen-interests, .gen-level, .gen-qualities {
   height: 100vh;
   position: relative; }
-  .gen-demographics .wrapper, .gen-interests .wrapper, .gen-level .wrapper {
+  .gen-demographics .wrapper, .gen-interests .wrapper, .gen-level .wrapper, .gen-qualities .wrapper {
     position: relative;
     top: 20%; }
 
@@ -261,7 +264,7 @@ form .final-button {
   justify-content: space-around; }
 
 .gen-level {
-  background: paleturquoise;
+  background: #93E1D8;
   height: 100vh; }
 
 .gen-interests {
@@ -289,6 +292,40 @@ form .final-button {
   .interest-flex .interestInput {
     max-width: 500px;
     width: 100%; }
+
+.gen-qualities {
+  background: paleturquoise;
+  height: 100vh;
+  position: relative; }
+
+.qualities-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  padding-top: 50px; }
+  .qualities-flex img {
+    max-width: 300px;
+    width: 100%;
+    opacity: 0.5;
+    min-height: 300px;
+    height: 100%; }
+  .qualities-flex .qualitiesInfo {
+    padding-top: 50px;
+    max-width: 500px;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
 
 .gen-level .final-button {
   position: absolute;
@@ -324,7 +361,7 @@ form .final-button {
 .gen-final {
   background: #5497a7;
   height: 75vh;
-  padding-top: 125px;
+  padding-top: 75px;
   position: relative; }
   .gen-final p {
     margin-top: 50px; }
@@ -337,31 +374,36 @@ form .final-button {
     height: 50px;
     width: 250px;
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     background: rgba(255, 255, 255, 0.5);
-    border: none; }
+    border: none;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; }
     .gen-final button:hover {
       background: white; }
 
 .final-info {
   font-size: 1.4rem;
   text-align: center;
-  font-weight: 400; }
+  font-weight: 700; }
 
 input[type=radio] {
   height: 18px;
   width: 18px; }
-  input[type=radio]:active {
-    background: orange; }
 
 .levelInput div label {
   position: relative; }
   .levelInput div label:hover {
     cursor: pointer; }
+
+.wrapper .results {
+  font-size: 1.4rem;
+  text-align: center; }
 
 footer {
   height: 25vh;
@@ -420,7 +462,7 @@ footer {
   main form .wrapper {
     padding: 0 20px; }
   main h4 {
-    font-size: 1.5rem; }
+    font-size: 2.4rem; }
   main h5 {
     font-size: 1rem; }
   .gen-demographics, .gen-interests, .gen-level {
@@ -463,15 +505,8 @@ footer {
     padding-top: 20px; }
   main .levelInput {
     padding-top: 10px; }
-  .gen-final {
-    padding-top: 50px;
-    height: 100vh; }
-  .final-info {
-    font-size: 16px; }
-  .results {
-    font-size: 1rem; }
-  p.final-info {
-    margin-top: 25px; }
+  main .gen-final {
+    padding-top: 40px; }
   footer {
     padding-left: 50px; } }
 
