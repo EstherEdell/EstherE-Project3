@@ -194,3 +194,18 @@ form {
     text-align:center;
     font-weight: 400;
 }
+
+input[type = radio] {
+    height:18px;
+    width:18px;
+    
+    &:active {
+        background:orange;
+    }
+}
+.levelInput div label {
+  position: relative;
+  &:hover {
+      cursor: pointer;
+  } 
+}

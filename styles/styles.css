@@ -352,12 +352,23 @@ form .final-button {
   text-align: center;
   font-weight: 400; }
 
+input[type=radio] {
+  height: 18px;
+  width: 18px; }
+  input[type=radio]:active {
+    background: orange; }
+
+.levelInput div label {
+  position: relative; }
+  .levelInput div label:hover {
+    cursor: pointer; }
+
 footer {
   height: 25vh;
   background-color: #93e1d8;
   font-size: 1rem;
   padding-top: 50px; }
-  footer .fa-linkedin-in, footer .fa-twitter {
+  footer .fa-linkedin-in, footer .fa-twitter, footer .fa-envelope-open {
     font-size: 1.2   rem;
     color: #353535; }
 
