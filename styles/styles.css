@@ -148,6 +148,7 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
     .hero .hero-text h1 {
       font-size: 6rem;
       color: #62a8ac;
+      font-weight: 300;
       text-shadow: 1px 2px 3px #353535; }
     .hero .hero-text h2 {
       font-size: 2rem;
@@ -165,7 +166,7 @@ main {
   color: #353535;
   line-height: 28px; }
   main h4 {
-    font-family: "Sacramento", cursive;
+    font-family: "Lato", serif;
     text-shadow: 1px 1px 5px #f0f7ee;
     font-size: 2.6rem;
     line-height: 20px;
@@ -388,7 +389,7 @@ form .final-button {
       background: white; }
 
 .final-info {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   text-align: center;
   font-weight: 700; }
 
@@ -402,7 +403,7 @@ input[type=radio] {
     cursor: pointer; }
 
 .wrapper .results {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   text-align: center; }
 
 footer {
@@ -507,6 +508,8 @@ footer {
     padding-top: 10px; }
   main .gen-final {
     padding-top: 40px; }
+  .final-info {
+    font-size: 1.2 rem; }
   footer {
     padding-left: 50px; } }
 
@@ -515,7 +518,7 @@ body {
   font-family: "Muli", sans-serif; }
 
 h1 {
-  font-family: "Sacramento", cursive;
+  font-family: "Lato", serif;
   color: #353535; }
 
 h1, h2, h3, h4 {
