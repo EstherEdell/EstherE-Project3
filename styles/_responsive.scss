@@ -29,7 +29,7 @@
         }
     }
 
-    .gen-demographics, .gen-interests, .gen-level {
+    .gen-demographics, .gen-interests, .gen-level, .gen-final {
     height:100vh;
     position: relative;
     .wrapper {
@@ -60,10 +60,7 @@
         letter-spacing: 0;
         padding:15px 25px;
     }
-    form h4 {
-        line-height: 42px;
-        padding:0px;
-    }
+    
 };
 
 @media (max-width:400px) {
