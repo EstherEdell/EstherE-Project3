@@ -523,13 +523,18 @@ footer {
       font-size: 1rem; }
   label {
     font-size: 1rem; }
+  .gen-final {
+    height: 100vh; }
   .results {
     font-size: 1.2rem; }
   .gen-level .final-button, .gen-final .start-again {
     font-size: 1rem;
     font-weight: 700;
     letter-spacing: 0;
-    padding: 15px 25px; } }
+    padding: 15px 25px; }
+  form h4 {
+    line-height: 42px;
+    padding: 0px; } }
 
 @media (max-width: 400px) {
   header {
@@ -565,9 +570,6 @@ footer {
     text-align: left; }
   footer {
     padding-left: 50px; }
-  form h4 {
-    line-height: 42px;
-    padding: 0px; }
   footer {
     padding-left: 0px; } }
 
@@ -591,8 +593,6 @@ footer {
       padding-top: 25px; }
   .levelInput {
     padding: 10px 5px; }
-  .gen-final {
-    height: 100vh; }
   .results {
     font-size: 1.1rem; } }
 
