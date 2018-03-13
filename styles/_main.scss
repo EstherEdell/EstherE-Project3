@@ -38,7 +38,7 @@ main a  {
     text-align: center;
     position: relative;
     p {
-        font-size:1rem;
+        font-size:1.2rem;
         line-height: 28px;
         padding-bottom:30px;
     }
@@ -179,11 +179,6 @@ form {
         height:100%;
     }
 }
-.levelInput {
-    div {
-        
-    }
-}
 
 .gen-final {
     background:$lightTeal;
@@ -192,6 +187,7 @@ form {
     position: relative;
     p {
         margin-top:50px;
+        line-height: 32px;
     }
     button {
         border-radius:10px;

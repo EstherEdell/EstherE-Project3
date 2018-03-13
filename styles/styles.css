@@ -236,7 +236,7 @@ main a {
   text-align: center;
   position: relative; }
   .introduction p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 28px;
     padding-bottom: 30px; }
   .introduction .wrapper {
@@ -394,7 +394,8 @@ form .final-button {
   padding-top: 75px;
   position: relative; }
   .gen-final p {
-    margin-top: 50px; }
+    margin-top: 50px;
+    line-height: 32px; }
   .gen-final button {
     border-radius: 10px;
     font-size: 1.4rem;
@@ -545,7 +546,8 @@ footer {
   .introduction h4 {
     line-height: 32px; }
   .introduction p {
-    font-size: 14px; }
+    font-size: 16px;
+    padding-top: 15px; }
   main form .wrapper {
     padding: 0 20px; }
   main h4 {
@@ -559,9 +561,40 @@ footer {
   main .gen-final {
     padding-top: 40px; }
   .final-info {
-    font-size: 1.2 rem; }
+    font-size: 1.2 rem;
+    text-align: left; }
   footer {
-    padding-left: 50px; } }
+    padding-left: 50px; }
+  form h4 {
+    line-height: 42px;
+    padding: 0px; }
+  footer {
+    padding-left: 0px; } }
+
+@media (max-width: 330px) {
+  .hero .hero-text h1 {
+    font-size: 2rem;
+    max-width: 250px; }
+  form a {
+    bottom: 2%; }
+  .introduction {
+    padding-top: 25px; }
+  .gen-qualities .qualitiesInput {
+    top: 10%; }
+    .gen-qualities .qualitiesInput h5 {
+      padding-top: 25px; }
+  .gen-level h4 {
+    padding-bottom: 25px; }
+  .qualities-flex {
+    padding-top: 25px; }
+    .qualities-flex .qualitiesInfo {
+      padding-top: 25px; }
+  .levelInput {
+    padding: 10px 5px; }
+  .gen-final {
+    height: 100vh; }
+  .results {
+    font-size: 1.1rem; } }
 
 body {
   font-size: 10px;
