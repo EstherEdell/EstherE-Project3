@@ -2,7 +2,6 @@
 //using stored values, a paragraph is generated
 //provide a way for user to easily copy the code
 //allow user to share website on twitter
-
 const myApp = {};
 
 //Allow user to input information

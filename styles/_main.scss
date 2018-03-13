@@ -7,7 +7,7 @@ main {
     color:$primaryColor;
     line-height:28px;
     h4 {
-        font-family: $secondFont;
+        color: $darkBlue;
         text-shadow:1px 1px 5px #f0f7ee;
         font-size:2.6rem;
         line-height: 20px;
@@ -22,21 +22,19 @@ main {
     }
 }
 main a  {
-    color:$primaryColor;
+    color:$orange;
+    display:block;
     font-size:2.5rem;
     position: absolute;
     bottom:5%;
     left:50%;
     transform: translateX(-50%);
     transition:all 0.3s;
-    &:hover {
-        transform:scale(1.5);
-    }
     
 }
 .introduction {
     height:50vh;
-    background-color:#93E1D8;
+    background-color:$lightTeal;
     text-align: center;
     position: relative;
     p {
@@ -60,7 +58,7 @@ form {
         font-size:1rem;
     }
     input[type=text]:focus {
-        border-bottom:3px solid $secondaryColor;
+        border-bottom:5px solid $yellow;
     }
     
     .final-button {
@@ -74,7 +72,7 @@ form {
         transition:all 0.3s;
 
         &:hover {
-            background:white;
+            background:$yellow;
         }
     }
 }
@@ -108,12 +106,9 @@ form {
     display: flex;
     justify-content: space-around;
 }
-.gen-level {
-    background:#93E1D8;
-    height:100vh;
-}
+
 .gen-interests {
-    background:#93E1D8;
+    background:$lightTeal;
     height:100vh;
     position: relative;
 }
@@ -134,6 +129,10 @@ form {
         width:100%;
     }
 } 
+.demoInput, .interestInput{
+    display:flex;
+    flex-direction:column;
+}
 .gen-qualities {
     background:paleturquoise;
     height:100vh;
@@ -159,7 +158,10 @@ form {
         flex-direction: column;
     }
 }
+
 .gen-level {
+    background:$darkTeal;
+    height:100vh;
     .final-button {
         position: absolute;
         bottom:10%;
@@ -178,17 +180,13 @@ form {
     }
 }
 .levelInput {
-    padding-top:50px;
     div {
-        padding-bottom:20px;
+        
     }
 }
-.demoInput, .interestInput{
-    display:flex;
-    flex-direction:column;
-}
+
 .gen-final {
-    background:#5497a7;
+    background:$lightTeal;
     height:75vh;
     padding-top:75px;
     position: relative;
@@ -196,7 +194,6 @@ form {
         margin-top:50px;
     }
     button {
-        background:white;
         border-radius:10px;
         font-size:1.4rem;
         font-weight: 400;
@@ -211,7 +208,7 @@ form {
         border:none;
         transition:all 0.3s;
         &:hover {
-            background:white;
+            background:$yellow;
         }
     }
 }
@@ -222,18 +219,32 @@ form {
 }
 
 input[type = radio] {
-    height:18px;
-    width:18px;
+    display:none;
     
 }
-.levelInput div label {
-  position: relative;
-  &:hover {
+.levelInput div  {
+    padding:15px 20px;
+    margin-top:20px;
+    background:$lightTeal;
+    text-align: center;
+    border:2px solid transparent;
+    // padding:15px 30px;
+    border-radius: 5px;
+  &:hover, &:focus {
       cursor: pointer;
+      color: $yellow;
   } 
+  label {
+      display: block;
+      padding:10px 20px;
+  }
 }
-
-.wrapper .results {
+input[type="radio"]:checked+label {
+    color: $yellow;
+}
+.wrapper .results p {
     font-size:1.1rem;
     text-align:center;
+    overflow: hidden;
+    
 }

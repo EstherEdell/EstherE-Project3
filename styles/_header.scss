@@ -9,11 +9,21 @@
     .hero-text {
         text-align:center;
         padding-top:100px;
+        max-width: 700px;
+        margin:0 auto;
         h1 {
             font-size:6rem;
-            color:$secondaryColor;
+            color:$darkTeal;
+            font-family: Arvo;
             font-weight:300;
             text-shadow:1px 2px 3px #353535;
+            overflow: hidden;
+            border-right: 15px solid $darkTeal;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: 2px;
+            animation: typing  3.5s steps(40, end),
+            cursor 1s step-end infinite;
         }
         h2 {
             font-size:2rem;
@@ -24,3 +34,24 @@
         }
     }
 }
+
+@keyframes typing {
+    0% {
+        width:0;
+    }
+    100% {
+        width:100%;
+    }
+}
+
+    @keyframes cursor {
+        0% {
+            border-color:transparent;
+        }
+        50% {
+            border-color:$darkTeal;
+        }
+        100% {
+            border-color: transparent;
+        }
+    }

@@ -144,18 +144,56 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   height: 100%; }
   .hero .hero-text {
     text-align: center;
-    padding-top: 100px; }
+    padding-top: 100px;
+    max-width: 700px;
+    margin: 0 auto; }
     .hero .hero-text h1 {
       font-size: 6rem;
-      color: #62a8ac;
+      color: #00ABB7;
+      font-family: Arvo;
       font-weight: 300;
-      text-shadow: 1px 2px 3px #353535; }
+      text-shadow: 1px 2px 3px #353535;
+      overflow: hidden;
+      border-right: 15px solid #00ABB7;
+      white-space: nowrap;
+      margin: 0 auto;
+      letter-spacing: 2px;
+      -webkit-animation: typing 3.5s steps(40, end), cursor 1s step-end infinite;
+      animation: typing 3.5s steps(40, end), cursor 1s step-end infinite; }
     .hero .hero-text h2 {
       font-size: 2rem;
       font-family: "Muli", sans-serif;
       font-weight: 400;
       color: #62a8ac;
       text-shadow: 1px 2px 3px #353535; }
+
+@-webkit-keyframes typing {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@keyframes typing {
+  0% {
+    width: 0; }
+  100% {
+    width: 100%; } }
+
+@-webkit-keyframes cursor {
+  0% {
+    border-color: transparent; }
+  50% {
+    border-color: #00ABB7; }
+  100% {
+    border-color: transparent; } }
+
+@keyframes cursor {
+  0% {
+    border-color: transparent; }
+  50% {
+    border-color: #00ABB7; }
+  100% {
+    border-color: transparent; } }
 
 img {
   display: block; }
@@ -166,7 +204,7 @@ main {
   color: #353535;
   line-height: 28px; }
   main h4 {
-    font-family: "Lato", serif;
+    color: #00417F;
     text-shadow: 1px 1px 5px #f0f7ee;
     font-size: 2.6rem;
     line-height: 20px;
@@ -179,7 +217,8 @@ main {
     padding-bottom: 15px; }
 
 main a {
-  color: #353535;
+  color: #FA6400;
+  display: block;
   font-size: 2.5rem;
   position: absolute;
   bottom: 5%;
@@ -190,14 +229,10 @@ main a {
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
-  main a:hover {
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    transform: scale(1.5); }
 
 .introduction {
   height: 50vh;
-  background-color: #93E1D8;
+  background-color: #38D6DD;
   text-align: center;
   position: relative; }
   .introduction p {
@@ -220,7 +255,7 @@ form input[type=text] {
   font-size: 1rem; }
 
 form input[type=text]:focus {
-  border-bottom: 3px solid #62a8ac; }
+  border-bottom: 5px solid #FFC13B; }
 
 form .final-button {
   border: 0px;
@@ -234,7 +269,7 @@ form .final-button {
   -o-transition: all 0.3s;
   transition: all 0.3s; }
   form .final-button:hover {
-    background: white; }
+    background: #FFC13B; }
 
 .gen-demographics {
   background: paleturquoise; }
@@ -264,12 +299,8 @@ form .final-button {
   -ms-flex-pack: distribute;
   justify-content: space-around; }
 
-.gen-level {
-  background: #93E1D8;
-  height: 100vh; }
-
 .gen-interests {
-  background: #93E1D8;
+  background: #38D6DD;
   height: 100vh;
   position: relative; }
 
@@ -293,6 +324,15 @@ form .final-button {
   .interest-flex .interestInput {
     max-width: 500px;
     width: 100%; }
+
+.demoInput, .interestInput {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
 
 .gen-qualities {
   background: paleturquoise;
@@ -328,13 +368,16 @@ form .final-button {
     -ms-flex-direction: column;
     flex-direction: column; }
 
-.gen-level .final-button {
-  position: absolute;
-  bottom: 10%;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%); }
+.gen-level {
+  background: #00ABB7;
+  height: 100vh; }
+  .gen-level .final-button {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%); }
 
 .level-flex {
   padding-top: 50px; }
@@ -345,29 +388,14 @@ form .final-button {
     min-height: 300px;
     height: 100%; }
 
-.levelInput {
-  padding-top: 50px; }
-  .levelInput div {
-    padding-bottom: 20px; }
-
-.demoInput, .interestInput {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
-
 .gen-final {
-  background: #5497a7;
+  background: #38D6DD;
   height: 75vh;
   padding-top: 75px;
   position: relative; }
   .gen-final p {
     margin-top: 50px; }
   .gen-final button {
-    background: white;
     border-radius: 10px;
     font-size: 1.4rem;
     font-weight: 400;
@@ -386,7 +414,7 @@ form .final-button {
     -o-transition: all 0.3s;
     transition: all 0.3s; }
     .gen-final button:hover {
-      background: white; }
+      background: #FFC13B; }
 
 .final-info {
   font-size: 1.2rem;
@@ -394,17 +422,29 @@ form .final-button {
   font-weight: 700; }
 
 input[type=radio] {
-  height: 18px;
-  width: 18px; }
+  display: none; }
 
-.levelInput div label {
-  position: relative; }
-  .levelInput div label:hover {
-    cursor: pointer; }
+.levelInput div {
+  padding: 15px 20px;
+  margin-top: 20px;
+  background: #38D6DD;
+  text-align: center;
+  border: 2px solid transparent;
+  border-radius: 5px; }
+  .levelInput div:hover, .levelInput div:focus {
+    cursor: pointer;
+    color: #FFC13B; }
+  .levelInput div label {
+    display: block;
+    padding: 10px 20px; }
 
-.wrapper .results {
+input[type="radio"]:checked + label {
+  color: #FFC13B; }
+
+.wrapper .results p {
   font-size: 1.1rem;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden; }
 
 footer {
   height: 25vh;
@@ -456,8 +496,11 @@ footer {
   header {
     height: 100%;
     max-height: 100vh; }
+  .hero .hero-text {
+    max-width: 450px; }
   .hero .hero-text h1 {
-    font-size: 3.6rem; }
+    font-size: 3.6rem;
+    border-right: 10px solid #00ABB7; }
   .hero .hero-text h2 {
     font-size: 1.6rem; }
   main form .wrapper {
@@ -490,10 +533,17 @@ footer {
 @media (max-width: 400px) {
   header {
     height: 50vh; }
+  .hero .hero-text {
+    max-width: 350px; }
   .hero .hero-text h1 {
-    font-size: 3rem; }
+    font-size: 3rem;
+    border-right: 5px solid #00ABB7; }
   .hero .hero-text h2 {
     font-size: 1.2rem; }
+  .introduction .wrapper {
+    top: 40%; }
+  .introduction h4 {
+    line-height: 32px; }
   .introduction p {
     font-size: 14px; }
   main form .wrapper {
@@ -516,10 +566,6 @@ footer {
 body {
   font-size: 10px;
   font-family: "Muli", sans-serif; }
-
-h1 {
-  font-family: "Lato", serif;
-  color: #353535; }
 
 h1, h2, h3, h4 {
   margin: 0; }

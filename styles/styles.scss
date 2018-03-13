@@ -1,5 +1,5 @@
 @import "_setup.scss";
-@import "_variables.scss";
+@import "variables";
 @import "_header.scss";
 @import "_main.scss";
 @import "_footer.scss";
@@ -10,10 +10,7 @@ body {
     font-family: $baseFont;
     
 }
-h1 {
-    font-family:$secondFont;
-    color:$primaryColor;
-}
+
 h1, h2, h3, h4 {
     margin:0;
 }
