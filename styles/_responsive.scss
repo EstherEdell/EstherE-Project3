@@ -109,9 +109,13 @@
             padding-top:10px;
         }
         .gen-final {
-            padding-top:40px;
+            padding-top:1px;
+            .wrapper {
+                top:5%;
+            }
         }
     }
+
     .final-info {
         font-size:1.2 rem;
         text-align: left;
