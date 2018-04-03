@@ -533,7 +533,7 @@ footer {
     letter-spacing: 0;
     padding: 15px 25px; } }
 
-@media (max-width: 400px) {
+@media (max-width: 411px) {
   header {
     height: 50vh; }
   .hero .hero-text {
@@ -548,14 +548,15 @@ footer {
   .introduction h4 {
     line-height: 32px; }
   .introduction p {
-    font-size: 16px;
+    font-size: 1.1rem;
     padding-top: 15px; }
   main form .wrapper {
     padding: 0 20px; }
   main h4 {
-    font-size: 2rem; }
+    font-size: 2rem;
+    line-height: 42px; }
   main h5 {
-    font-size: 1rem; }
+    font-size: 1.1rem; }
   main .interest-flex, main .level-flex {
     padding-top: 20px; }
   main .levelInput {
@@ -570,10 +571,27 @@ footer {
   footer {
     padding-left: 0px; } }
 
-@media (max-width: 330px) {
+@media (max-width: 320px) {
+  .introduction p {
+    font-size: 1rem;
+    padding-bottom: 5px; }
   .hero .hero-text h1 {
     font-size: 2rem;
     max-width: 250px; }
+  .introduction,
+  .gen-demographics,
+  .gen-interests,
+  .gen-qualities {
+    height: 125vh; }
+  .gen-level,
+  .gen-final {
+    height: 150vh; }
+  main .gen-final {
+    padding-top: 10px; }
+  .gen-final p {
+    margin-top: 15px; }
+  .introduction h4 {
+    font-size: 1.6rem; }
   form a {
     bottom: 2%; }
   .introduction {
@@ -591,7 +609,9 @@ footer {
   .levelInput {
     padding: 10px 5px; }
   .results {
-    font-size: 1.1rem; } }
+    font-size: 1.1rem; }
+  footer {
+    padding-top: 20px; } }
 
 body {
   font-size: 10px;
